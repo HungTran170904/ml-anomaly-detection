@@ -7,18 +7,17 @@ file_path = os.path.join(BASE_DIR, "../data/raw_data/traces.jsonl")
 
 # Read JSON lines
 with open(file_path, "r") as f:
-    data = [json.loads(line) for line in f]
+    json_lines = [json.loads(line) for line in f]
 
-# Wrap into DataFrame
-df = pd.json_normalize(
-    data,
-    record_path=["resourceSpans", "scopeSpans", "spans"],  # go into spans
-    meta=[
-        ["resourceSpans", "resource", "attributes"],
-        ["resourceSpans", "schemaUrl"]
-    ],
-    sep="."
-)
+# Extrace features
+data = []
+for json_str in json_lines:
+    trace_obj = json.loads(json_str)
+    data.append({
+        ""
+    })
+
+
 
 
 # Select the first row (index 0)
