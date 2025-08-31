@@ -1,0 +1,265 @@
+instrumentation_library,service_name,traceId,spanId,operation,kind,duration,span_status,http.status_code,parent.service_name,parent.operation,parent.kind
+io.opentelemetry.mongo-3.1,meeting-service,5eb70927e125853655e414da10fa3f39,b111e0ec9a2a9e81,createIndexes meetingdb.Meeting,3,72352640,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,3db330b9208493af9242ae924c8cda61,a6dabbc5563c37f8,basic.consume,3,24783368,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,7e4a80abf165a73cb93973d2f0e8f2c1,95c057557b829806,queue.declare,3,2964808,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,b2a134e67222ff458d90f35778da0da8,2e53502685285859,basic.qos,3,5588131,1,,,,
+io.opentelemetry.jdbc,user-service,0dbe3cc958ff2a1067baf4397f050343,9cde31f041468287,SELECT userdb.userdb,3,1459355,1,,,,
+io.opentelemetry.jdbc,user-service,2833ac5645bea2349ae5850885ab0b7a,a40f97becf31d3a0,SELECT userdb.userdb,3,1589650,1,,,,
+io.opentelemetry.jdbc,user-service,9e4e2ac2660fdcb748b5de25efb2092e,f4b2e62a3eba1b59,SELECT userdb.userdb,3,1395366,1,,,,
+io.opentelemetry.http-url-connection,websocket-service,c37ffdb56b3358a86a523ea176c6bf96,16dd9f88749fa4dc,GET,3,933902539,1,200,,,
+io.opentelemetry.tomcat-10.0,websocket-service,50932bb685b4a6465479b8276f8778ae,3f5ed31736c12d79,GET /websocket-service/wss/**,2,714086638,1,101,,,
+io.opentelemetry.tomcat-10.0,websocket-service,ad61d57f6cb1110f0abcfb205c6f368f,b8efa53746c1827e,GET /websocket-service/wss/**,2,179086227,1,200,,,
+io.opentelemetry.hibernate-6.0,user-service,4705f53074769b324484ca723675e268,35f1058027e44b84,SELECT,1,67232412,1,,,,
+io.opentelemetry.jdbc,user-service,4705f53074769b324484ca723675e268,b55042809c2d4f92,SELECT userdb,3,6656103,1,,user-service,SELECT,1.0
+io.opentelemetry.spring-data-1.8,user-service,4705f53074769b324484ca723675e268,2e0222e282bfb97a,FriendRelationRepository.getFriends,1,105875261,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,4705f53074769b324484ca723675e268,73cfbdea93ea364a,GET /user-service/friend,2,1895443371,1,200,,,
+io.opentelemetry.hibernate-6.0,user-service,4281ad7d1c1157caca35c8ba428b2ff4,cfec565745fdf676,SELECT,1,3080943,1,,,,
+io.opentelemetry.jdbc,user-service,4281ad7d1c1157caca35c8ba428b2ff4,e9cbf7c48fecb1a4,SELECT userdb,3,1417457,1,,user-service,SELECT,1.0
+io.opentelemetry.spring-data-1.8,user-service,4281ad7d1c1157caca35c8ba428b2ff4,cc950c23515f69c4,FriendRelationRepository.getFriends,1,3545080,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,4281ad7d1c1157caca35c8ba428b2ff4,3c24c615eea4dd43,GET /user-service/friend,2,8881370,1,200,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,5af865f49cbb15507e94964d78fbba43,808b449788de873f,queue.bind,3,2249411,1,,,,
+io.opentelemetry.tomcat-10.0,chat-service,7c229a04a62bfd6693acd9071d0fe6f0,7785ce08331b6536,OPTIONS /chat-service/message/friend/{friendId},2,128402921,1,200,,,
+io.opentelemetry.tomcat-10.0,chat-service,fec684a8b3e4e29950e0190813bb8403,16108cb9cd984668,GET /chat-service/message/friend/{friendId},2,1710582307,1,200,,,
+io.opentelemetry.http-url-connection,chat-service,fec684a8b3e4e29950e0190813bb8403,b0c2938c30a13737,GET,3,873530067,1,200,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.http-url-connection,chat-service,fec684a8b3e4e29950e0190813bb8403,ca84fc7b60b68d22,GET,3,270288277,1,200,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.mongo-3.1,chat-service,fec684a8b3e4e29950e0190813bb8403,a1820786dbfb22e9,find chatdb.Message,3,43121455,1,,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.java-http-client,chat-service,fec684a8b3e4e29950e0190813bb8403,72871114722b5ca7,GET,3,109877684,1,200,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.hibernate-6.0,user-service,fec684a8b3e4e29950e0190813bb8403,c70899955df04775,SELECT meetingteam.userservice.models.FriendRelation,1,6236401,1,,,,
+io.opentelemetry.jdbc,user-service,fec684a8b3e4e29950e0190813bb8403,33e2e06ce614272a,SELECT userdb.friend_relation,3,900002,1,,user-service,SELECT meetingteam.userservice.models.FriendRelation,1.0
+io.opentelemetry.spring-data-1.8,user-service,fec684a8b3e4e29950e0190813bb8403,ea9d121e6068c851,FriendRelationRepository.havingFriend,1,12338050,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,fec684a8b3e4e29950e0190813bb8403,5749ec4c4f99b6b7,GET /user-service/friend/private/is-friend,2,21691781,1,200,chat-service,GET,3.0
+io.opentelemetry.java-http-client,chat-service,c45cd717253848584527358bf1147dd1,2695e490d4b96461,GET,3,7637000,1,200,,,
+io.opentelemetry.hibernate-6.0,user-service,c45cd717253848584527358bf1147dd1,c6bda8aa912ff5eb,SELECT meetingteam.userservice.models.FriendRelation,1,2134329,1,,,,
+io.opentelemetry.jdbc,user-service,c45cd717253848584527358bf1147dd1,c954ab9a8759337a,SELECT userdb.friend_relation,3,779263,1,,user-service,SELECT meetingteam.userservice.models.FriendRelation,1.0
+io.opentelemetry.spring-data-1.8,user-service,c45cd717253848584527358bf1147dd1,179786bfd3b2993a,FriendRelationRepository.havingFriend,1,2610083,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,c45cd717253848584527358bf1147dd1,486ebdf33a2e86e0,GET /user-service/friend/private/is-friend,2,5290390,1,200,chat-service,GET,3.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,c45cd717253848584527358bf1147dd1,b8457f06dd602304,50b0dc1d-f20f-4adc-b2f3-91efb3b8b849 process,5,184930,1,,,,
+io.opentelemetry.spring-rabbit-1.0,websocket-service,c45cd717253848584527358bf1147dd1,d5dfd87b1f5c48b9,/topic/user.a4e804c8-60a1-7021-21ee-393fdfbe2492 process,5,53715753,1,,,,
+io.opentelemetry.tomcat-10.0,chat-service,d3fdd35eb3ca0eedcdc3bcf4f59f874e,13858a29f54bcd5e,OPTIONS /chat-service/message/text_message,2,2986636,1,200,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,7aceb287d9183f7f662f543d0f904c02,4e520417f1f54660,basic.ack,3,271468,1,,,,
+io.opentelemetry.tomcat-10.0,chat-service,c45cd717253848584527358bf1147dd1,7a4c9d05bc35af36,POST /chat-service/message/text_message,2,318251183,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,c45cd717253848584527358bf1147dd1,cf79919e4e7e0783,insert chatdb.Message,3,48803234,1,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,c45cd717253848584527358bf1147dd1,07cb6ac3b7c52b56,meetingteam-exchange publish,4,3687016,1,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,c45cd717253848584527358bf1147dd1,284e9b4ca601954b,meetingteam-exchange publish,4,190601,1,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,c83bd02e939cc916674eb9cdc15d56d9,d17f212e00ac6092,basic.ack,3,184538,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,6c60bf0a5b20544a4baac8f2e1245658,326295f92303c2c3,50b0dc1d-f20f-4adc-b2f3-91efb3b8b849 process,5,125170,1,,,,
+io.opentelemetry.spring-rabbit-1.0,websocket-service,6c60bf0a5b20544a4baac8f2e1245658,f0e4465e1e5f2375,/topic/user.a4e804c8-60a1-7021-21ee-393fdfbe2492 process,5,3023452,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,eb1291958c4135fc2ed2087ecf5a3351,b53749d4fc7bf709,basic.ack,3,324911,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,7e3fe71816474c7529420d2647abf4ad,0d7b774d2e12d077,50b0dc1d-f20f-4adc-b2f3-91efb3b8b849 process,5,133277,1,,,,
+io.opentelemetry.spring-rabbit-1.0,websocket-service,7e3fe71816474c7529420d2647abf4ad,faa620d855fb0171,/topic/user.a4e804c8-60a1-7021-21ee-393fdfbe2492 process,5,2250807,1,,,,
+io.opentelemetry.tomcat-10.0,chat-service,7e3fe71816474c7529420d2647abf4ad,bd8ab073b2a08c59,PUT /chat-service/message/reaction,2,97273681,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,7e3fe71816474c7529420d2647abf4ad,7c03e012ab10c43e,find chatdb.Message,3,39035893,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.mongo-3.1,chat-service,7e3fe71816474c7529420d2647abf4ad,27e2b49eeab51f6a,update chatdb.Message,3,42845599,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,7e3fe71816474c7529420d2647abf4ad,e6980da573f37900,meetingteam-exchange publish,4,371099,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,7e3fe71816474c7529420d2647abf4ad,292bf1877ccb7bbe,meetingteam-exchange publish,4,258638,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.tomcat-10.0,chat-service,02cfa4987e7eb172f9b11a6c26526051,c12035ffeac16caa,PUT /chat-service/message/reaction,2,96664622,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,02cfa4987e7eb172f9b11a6c26526051,78b866b03d5be6b7,find chatdb.Message,3,38340056,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.mongo-3.1,chat-service,02cfa4987e7eb172f9b11a6c26526051,9194ae21c38935e6,update chatdb.Message,3,43341973,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,02cfa4987e7eb172f9b11a6c26526051,8768ce85087cd22a,meetingteam-exchange publish,4,345859,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,02cfa4987e7eb172f9b11a6c26526051,e4591a5288922155,meetingteam-exchange publish,4,270322,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,02cfa4987e7eb172f9b11a6c26526051,16d23f3a30d256c7,50b0dc1d-f20f-4adc-b2f3-91efb3b8b849 process,5,290993,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.spring-rabbit-1.0,websocket-service,02cfa4987e7eb172f9b11a6c26526051,9aca6cfe7496d325,/topic/user.a4e804c8-60a1-7021-21ee-393fdfbe2492 process,5,2033001,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,05fa7383ee851c574d35be119c3d7184,f79654d2d88898be,basic.ack,3,341370,1,,,,
+io.opentelemetry.tomcat-10.0,chat-service,4654ce1669ad80905adadee6dd07b9af,4bcd5beb0993bb6a,POST /chat-service/message/text_message,2,67913978,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,4654ce1669ad80905adadee6dd07b9af,814f0670787c0def,insert chatdb.Message,3,42853257,1,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.java-http-client,chat-service,4654ce1669ad80905adadee6dd07b9af,5ee0c695e2682f76,GET,3,10925644,1,200,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,4654ce1669ad80905adadee6dd07b9af,3272cb74e76c8000,meetingteam-exchange publish,4,361672,1,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,4654ce1669ad80905adadee6dd07b9af,11f3c78d355a1d0f,meetingteam-exchange publish,4,302143,1,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.hibernate-6.0,user-service,4654ce1669ad80905adadee6dd07b9af,8c9eba23dc3e3b27,SELECT meetingteam.userservice.models.FriendRelation,1,3139833,1,,,,
+io.opentelemetry.jdbc,user-service,4654ce1669ad80905adadee6dd07b9af,bafc939cede17f97,SELECT userdb.friend_relation,3,1556801,1,,user-service,SELECT meetingteam.userservice.models.FriendRelation,1.0
+io.opentelemetry.spring-data-1.8,user-service,4654ce1669ad80905adadee6dd07b9af,0625c7e3d06503ce,FriendRelationRepository.havingFriend,1,3841012,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,4654ce1669ad80905adadee6dd07b9af,7aef60b21e9aec84,GET /user-service/friend/private/is-friend,2,7946011,1,200,chat-service,GET,3.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,4654ce1669ad80905adadee6dd07b9af,e8cc97e65cce713c,50b0dc1d-f20f-4adc-b2f3-91efb3b8b849 process,5,135597,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.spring-rabbit-1.0,websocket-service,4654ce1669ad80905adadee6dd07b9af,0c5adf5db5fe463f,/topic/user.a4e804c8-60a1-7021-21ee-393fdfbe2492 process,5,2064355,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,f1977950003dedbae35fe71e2e49b3c2,b4adce62e8230aea,basic.ack,3,271700,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,d8954c3690e0b1c27b7286ef393ea766,05d1caf4233b3cb8,queue.unbind,3,3179226,1,,,,
+io.opentelemetry.tomcat-10.0,websocket-service,af56e4fe2fc1ca5ebd9648253db25ddc,1d3e5f0f4919fe9e,GET /websocket-service/wss/**,2,7098181,1,200,,,
+io.opentelemetry.tomcat-10.0,websocket-service,9b8ffd0f5fd1ca621a145ee7aaea414d,1c7104abac08f3a2,GET /websocket-service/wss/**,2,4547303,1,101,,,
+io.opentelemetry.tomcat-10.0,chat-service,876484efde6ae7e10e0673edea045ff3,8aa36c7afaaf30c6,GET /chat-service/message/friend/{friendId},2,56111742,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,876484efde6ae7e10e0673edea045ff3,6b597e71a759ff43,find chatdb.Message,3,38143266,1,,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.java-http-client,chat-service,876484efde6ae7e10e0673edea045ff3,f402c6eb99a64103,GET,3,8939520,1,200,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.tomcat-10.0,chat-service,c14ff63a75496041d102fdd4f2fbf5dd,047305b0e45ccd1d,GET /chat-service/message/friend/{friendId},2,54089157,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,c14ff63a75496041d102fdd4f2fbf5dd,1e0bef5685088089,find chatdb.Message,3,37691596,1,,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.java-http-client,chat-service,c14ff63a75496041d102fdd4f2fbf5dd,1d4d2643c521ddcd,GET,3,7736896,1,200,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,d19e61b1814c84083cd817ce9c1d0d4f,9e554c2d3a079449,queue.bind,3,2477780,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,e954e9b3bd25fd6d211664e49f02b079,6e859842a7028191,queue.bind,3,2558280,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,79082c8999bca7d69cb3e17508ea4a80,de7bf52aa98e486e,queue.unbind,3,2091484,1,,,,
+io.opentelemetry.tomcat-10.0,websocket-service,2909292a65cab6a898f1ab8ba263d109,dc85913c25ee21d6,GET /websocket-service/wss/**,2,3360799,1,101,,,
+io.opentelemetry.tomcat-10.0,websocket-service,b98d0bf9b836eddadd5dfcb6621f7473,a8ded35d40ba25d3,GET /websocket-service/wss/**,2,3767210,1,101,,,
+io.opentelemetry.tomcat-10.0,websocket-service,0e7850210f1b392170ba81bcdafd9d31,39a141cb646af6e3,GET /websocket-service/wss/**,2,3728898,1,200,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,31cdecf1fef8bdd995c95ab2fdae611a,f6e0a84b1bdcc16a,queue.unbind,3,1630119,1,,,,
+io.opentelemetry.tomcat-10.0,chat-service,3cf4518e58158e8d4c1fc983131d453b,2b9c3e587a0f4ab7,GET /chat-service/message/friend/{friendId},2,64745954,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,3cf4518e58158e8d4c1fc983131d453b,a409b3942111d59e,find chatdb.Message,3,47219625,1,,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.java-http-client,chat-service,3cf4518e58158e8d4c1fc983131d453b,804eee63ad061f1b,GET,3,6411657,1,200,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.tomcat-10.0,chat-service,e9256da4665cdb22540636e1a56a7451,8658e0bee0c28a6e,GET /chat-service/message/friend/{friendId},2,59036858,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,e9256da4665cdb22540636e1a56a7451,d17d8f334fe790e4,find chatdb.Message,3,39353174,1,,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.java-http-client,chat-service,e9256da4665cdb22540636e1a56a7451,c7dddcfc2bf76e5c,GET,3,9434843,1,200,chat-service,GET /chat-service/message/friend/{friendId},2.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,ae37f856673d1b30b42067e49192b0bb,5a7ba3ef620aec29,queue.bind,3,2593348,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,1b8c3797613568e2cdf6f1fb4b216e6b,7e8d410984feef74,SELECT meetingteam.userservice.models.FriendRelation,1,2248808,1,,,,
+io.opentelemetry.jdbc,user-service,1b8c3797613568e2cdf6f1fb4b216e6b,4b85a95e4bf7ec91,SELECT userdb.friend_relation,3,829298,1,,user-service,SELECT meetingteam.userservice.models.FriendRelation,1.0
+io.opentelemetry.spring-data-1.8,user-service,1b8c3797613568e2cdf6f1fb4b216e6b,148d56cf4b65dfb4,FriendRelationRepository.havingFriend,1,2598296,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,1b8c3797613568e2cdf6f1fb4b216e6b,ab7dc4f144f37e7e,GET /user-service/friend/private/is-friend,2,6105663,1,200,,,
+io.opentelemetry.tomcat-10.0,chat-service,fa661cd4bb70090df2b0568af203f638,18b5a1d6fca46938,PUT /chat-service/message/reaction,2,100223097,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,fa661cd4bb70090df2b0568af203f638,c210a5b82eee7dc7,find chatdb.Message,3,38754189,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.mongo-3.1,chat-service,fa661cd4bb70090df2b0568af203f638,40b2f2670d7594ab,update chatdb.Message,3,47136923,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,fa661cd4bb70090df2b0568af203f638,15dc77c3dc2c1ad6,meetingteam-exchange publish,4,379696,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,fa661cd4bb70090df2b0568af203f638,c3929c37d72d6ba2,meetingteam-exchange publish,4,281139,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,fa661cd4bb70090df2b0568af203f638,4ece419647125ce5,50b0dc1d-f20f-4adc-b2f3-91efb3b8b849 process,5,146397,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.spring-rabbit-1.0,websocket-service,fa661cd4bb70090df2b0568af203f638,3c21dc1e23514107,/topic/user.a4e804c8-60a1-7021-21ee-393fdfbe2492 process,5,6301476,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,fa5a4cdd3b4af332d6b3443183d48a7f,fd89f3fa525052ab,basic.ack,3,171228,1,,,,
+io.opentelemetry.tomcat-10.0,chat-service,1d209ee11e58fb6baa1d87e71339b14d,8cfb036a4025e8ec,POST /chat-service/media-file,2,1846810950,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,1d209ee11e58fb6baa1d87e71339b14d,1d44a7336d6cd009,insert chatdb.Message,3,40831177,1,,chat-service,POST /chat-service/media-file,2.0
+io.opentelemetry.java-http-client,chat-service,1d209ee11e58fb6baa1d87e71339b14d,d5484aa2f048779b,GET,3,9596774,1,200,chat-service,POST /chat-service/media-file,2.0
+io.opentelemetry.aws-sdk-2.2,chat-service,1d209ee11e58fb6baa1d87e71339b14d,1c7152a82834bc3b,S3.PutObjectTagging,3,1696535289,1,200,chat-service,POST /chat-service/media-file,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,1d209ee11e58fb6baa1d87e71339b14d,b571945a8f8efd17,meetingteam-exchange publish,4,352508,1,,chat-service,POST /chat-service/media-file,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,1d209ee11e58fb6baa1d87e71339b14d,36246ed1c2af6c33,meetingteam-exchange publish,4,206823,1,,chat-service,POST /chat-service/media-file,2.0
+io.opentelemetry.hibernate-6.0,user-service,1d209ee11e58fb6baa1d87e71339b14d,5ef555f99ec9800d,SELECT meetingteam.userservice.models.FriendRelation,1,2520949,1,,,,
+io.opentelemetry.jdbc,user-service,1d209ee11e58fb6baa1d87e71339b14d,e0d5a4073c67b924,SELECT userdb.friend_relation,3,808151,1,,user-service,SELECT meetingteam.userservice.models.FriendRelation,1.0
+io.opentelemetry.spring-data-1.8,user-service,1d209ee11e58fb6baa1d87e71339b14d,402566d58a941db0,FriendRelationRepository.havingFriend,1,3035109,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,1d209ee11e58fb6baa1d87e71339b14d,0fe25adb97e9451c,GET /user-service/friend/private/is-friend,2,6130334,1,200,chat-service,GET,3.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,1d209ee11e58fb6baa1d87e71339b14d,d2e6261890792f07,50b0dc1d-f20f-4adc-b2f3-91efb3b8b849 process,5,356056,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.spring-rabbit-1.0,websocket-service,1d209ee11e58fb6baa1d87e71339b14d,baaf21605bab4dd4,/topic/user.a4e804c8-60a1-7021-21ee-393fdfbe2492 process,5,1146606,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.tomcat-10.0,chat-service,c20d291d3ec81e92a75c89ff0dfab6d8,cccff4cd5820c483,OPTIONS /chat-service/media-file,2,3244626,1,200,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,4276909c5b1699c7f5c89d96a5bd9928,c7dc5ffcddc21360,basic.ack,3,129360,1,,,,
+io.opentelemetry.tomcat-10.0,chat-service,0e9b38911c949556e417ffff2c008024,00f048955a979370,PUT /chat-service/message/reaction,2,98511948,1,200,,,
+io.opentelemetry.mongo-3.1,chat-service,0e9b38911c949556e417ffff2c008024,e99b82b711af48df,find chatdb.Message,3,39656971,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.mongo-3.1,chat-service,0e9b38911c949556e417ffff2c008024,bbaa2ed3c8f5406c,update chatdb.Message,3,43898542,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,0e9b38911c949556e417ffff2c008024,6489ab940473e99a,meetingteam-exchange publish,4,395815,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,chat-service,0e9b38911c949556e417ffff2c008024,2ce10cd376d7feb8,meetingteam-exchange publish,4,283396,1,,chat-service,PUT /chat-service/message/reaction,2.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,0e9b38911c949556e417ffff2c008024,b857dd8d4e1ed386,50b0dc1d-f20f-4adc-b2f3-91efb3b8b849 process,5,126202,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.spring-rabbit-1.0,websocket-service,0e9b38911c949556e417ffff2c008024,97b5286f192e1e13,/topic/user.a4e804c8-60a1-7021-21ee-393fdfbe2492 process,5,1752313,1,,chat-service,meetingteam-exchange publish,4.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,6a2f9a1106aadad8a8102fa4f5a7d84d,66f052b7b2afcfa8,basic.ack,3,290748,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,fb83b2f829ba546dc2aad7e2037e2f17,976faef88580c858,SELECT meetingteam.userservice.models.FriendRequest,1,11398218,1,,,,
+io.opentelemetry.jdbc,user-service,fb83b2f829ba546dc2aad7e2037e2f17,c23f52bca9adeae5,SELECT userdb.friend_request,3,2510710,1,,user-service,SELECT meetingteam.userservice.models.FriendRequest,1.0
+io.opentelemetry.spring-data-1.8,user-service,fb83b2f829ba546dc2aad7e2037e2f17,5614dc9d5803431b,FriendRequestRepository.getReceivedRequests,1,12851532,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,fb83b2f829ba546dc2aad7e2037e2f17,625ba542eb957c16,GET /user-service/friend-request/received-requests,2,24101775,1,200,,,
+io.opentelemetry.tomcat-10.0,user-service,e7a27ec4d10d2c260bf018ba6a37c067,d4361b7778309230,OPTIONS /user-service/friend-request/received-requests,2,2590539,1,200,,,
+io.opentelemetry.tomcat-10.0,meeting-service,a88332ebe1359c824df9aaa592cbdee3,32fc396d7d0efa0f,OPTIONS /meeting-service/calendar/week/{week},2,3418243,1,200,,,
+io.opentelemetry.tomcat-10.0,meeting-service,79a20f80f1ee8ff3ce5543ed6b21dea3,a180134e76835a22,OPTIONS /meeting-service/calendar/week/{week},2,4659188,1,200,,,
+io.opentelemetry.hibernate-6.0,user-service,3e07a7132dcedeedc0506197632fa57e,a132ce75b49a747c,SELECT meetingteam.userservice.models.FriendRequest,1,2173736,1,,,,
+io.opentelemetry.jdbc,user-service,3e07a7132dcedeedc0506197632fa57e,d41e962515fe5cc3,SELECT userdb.friend_request,3,948451,1,,user-service,SELECT meetingteam.userservice.models.FriendRequest,1.0
+io.opentelemetry.spring-data-1.8,user-service,3e07a7132dcedeedc0506197632fa57e,33e02a4f703ea627,FriendRequestRepository.getReceivedRequests,1,2535155,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,3e07a7132dcedeedc0506197632fa57e,6f59cedcc4b90e3e,GET /user-service/friend-request/received-requests,2,7065679,1,200,,,
+io.opentelemetry.tomcat-10.0,chat-service,8c662f482780ac06d2283abde8ac74d5,6be8f5f94a21103f,POST /chat-service/media-file/presigned-url,2,7260642,1,200,,,
+io.opentelemetry.tomcat-10.0,user-service,bb8b97ae36521fc1e2b5a4aa3df6feb7,3cd55fb6a40959cc,OPTIONS /user-service/user,2,4601415,1,200,,,
+io.opentelemetry.rabbitmq-2.7,user-service,9422a52109e474a435d39428045b1846,40e54baae1ca6889,meetingteam-exchange publish,4,2882528,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,9422a52109e474a435d39428045b1846,036bffdf33aba0be,Session.find meetingteam.userservice.models.User,1,1692753,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,9422a52109e474a435d39428045b1846,d8be73c4da882d1b,Transaction.commit,1,1416932,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,9422a52109e474a435d39428045b1846,5e843a95a1b4b3fc,Session.merge meetingteam.userservice.models.User,1,5572642,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,9422a52109e474a435d39428045b1846,46deb46d8b82ebb4,Transaction.commit,1,33008198,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,9422a52109e474a435d39428045b1846,65ceff5827cf5832,SELECT,1,4424977,1,,,,
+io.opentelemetry.aws-sdk-2.2,user-service,9422a52109e474a435d39428045b1846,dbb69812779652a4,S3.PutObjectTagging,3,1355813087,1,200,,,
+io.opentelemetry.aws-sdk-2.2,user-service,9422a52109e474a435d39428045b1846,780d6fbd428b9429,S3.DeleteObject,3,309742794,1,204,,,
+io.opentelemetry.jdbc,user-service,9422a52109e474a435d39428045b1846,59a0736b83e91e59,SELECT userdb.user,3,706369,1,,user-service,Session.find meetingteam.userservice.models.User,1.0
+io.opentelemetry.jdbc,user-service,9422a52109e474a435d39428045b1846,b7022e159afb5b22,UPDATE userdb.user,3,5377470,1,,user-service,Transaction.commit,1.0
+io.opentelemetry.jdbc,user-service,9422a52109e474a435d39428045b1846,f117816ae7d5d57e,SELECT userdb,3,936679,1,,user-service,SELECT,1.0
+io.opentelemetry.spring-data-1.8,user-service,9422a52109e474a435d39428045b1846,2856f1145ea5f4dd,UserRepository.findById,1,5913057,1,,,,
+io.opentelemetry.spring-data-1.8,user-service,9422a52109e474a435d39428045b1846,39ceedd9182c3a9e,UserRepository.save,1,43037479,1,,,,
+io.opentelemetry.spring-data-1.8,user-service,9422a52109e474a435d39428045b1846,0017f1d6121bea56,FriendRelationRepository.getFriendsIds,1,5558685,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,9422a52109e474a435d39428045b1846,f8173791300392ac,PATCH /user-service/user,2,2054114081,1,200,,,
+io.opentelemetry.tomcat-10.0,chat-service,eea6ea78c1082123dc1a89ef984407c5,00178eaa577937e3,POST /chat-service/media-file/presigned-url,2,51657400,1,200,,,
+io.opentelemetry.hibernate-6.0,user-service,be68eee1d45a9fd18c42c9c2137256b1,45b983e9348993da,Session.find meetingteam.userservice.models.User,1,1469458,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,be68eee1d45a9fd18c42c9c2137256b1,3e76683f540dad85,Transaction.commit,1,589807,1,,,,
+io.opentelemetry.jdbc,user-service,be68eee1d45a9fd18c42c9c2137256b1,92ad6a69d9738b0d,SELECT userdb.user,3,594056,1,,user-service,Session.find meetingteam.userservice.models.User,1.0
+io.opentelemetry.spring-data-1.8,user-service,be68eee1d45a9fd18c42c9c2137256b1,c7f5a985b6d01a7e,UserRepository.findById,1,4019887,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,2f645a0b802b1d65,Session.find meetingteam.userservice.models.User,1,1418020,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,9b910cc0821fcca0,Transaction.commit,1,524372,1,,,,
+io.opentelemetry.aws-sdk-2.2,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,257849221475f9b4,S3.PutObjectTagging,3,1189586543,1,200,,,
+io.opentelemetry.jdbc,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,9c06027ceb4231d7,SELECT userdb.user,3,516003,1,,user-service,Session.find meetingteam.userservice.models.User,1.0
+io.opentelemetry.spring-data-1.8,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,0a2de50cb30bd183,UserRepository.findById,1,3671278,1,,,,
+io.opentelemetry.rabbitmq-2.7,user-service,be68eee1d45a9fd18c42c9c2137256b1,2b38a15774da7bb1,meetingteam-exchange publish,4,197740,1,,,,
+io.opentelemetry.aws-sdk-2.2,user-service,be68eee1d45a9fd18c42c9c2137256b1,8785b8afbf1efb87,S3.PutObjectTagging,3,1144048289,1,200,,,
+io.opentelemetry.aws-sdk-2.2,user-service,be68eee1d45a9fd18c42c9c2137256b1,ea73f37a2a741c48,S3.DeleteObject,3,287781562,1,204,,,
+io.opentelemetry.hibernate-6.0,user-service,be68eee1d45a9fd18c42c9c2137256b1,d73714f124709d52,Session.merge meetingteam.userservice.models.User,1,114936,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,be68eee1d45a9fd18c42c9c2137256b1,bf928e67e03ac337,Transaction.commit,1,8255088,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,be68eee1d45a9fd18c42c9c2137256b1,3d2360bae2c90814,SELECT,1,1334261,1,,,,
+io.opentelemetry.jdbc,user-service,be68eee1d45a9fd18c42c9c2137256b1,2caabaa63bcc6144,UPDATE userdb.user,3,1111707,1,,user-service,Transaction.commit,1.0
+io.opentelemetry.jdbc,user-service,be68eee1d45a9fd18c42c9c2137256b1,999a4eb2af9f471b,SELECT userdb,3,734884,1,,user-service,SELECT,1.0
+io.opentelemetry.spring-data-1.8,user-service,be68eee1d45a9fd18c42c9c2137256b1,8f24f80f9a72147c,UserRepository.save,1,9815935,1,,,,
+io.opentelemetry.spring-data-1.8,user-service,be68eee1d45a9fd18c42c9c2137256b1,a5dc9fe20bc8e718,FriendRelationRepository.getFriendsIds,1,1728698,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,be68eee1d45a9fd18c42c9c2137256b1,c8f38f581a0fa9bc,PATCH /user-service/user,2,1457941141,1,200,,,
+io.opentelemetry.rabbitmq-2.7,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,96e17039aa87692d,meetingteam-exchange publish,4,184900,1,,,,
+io.opentelemetry.aws-sdk-2.2,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,43e5ab771997ded1,S3.DeleteObject,3,306118557,1,204,,,
+io.opentelemetry.hibernate-6.0,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,c7d5b2aa96ada044,Session.merge meetingteam.userservice.models.User,1,510257,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,35d20dfb52eb30a7,Transaction.commit,1,11733611,1,,,,
+io.opentelemetry.hibernate-6.0,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,9f746affe071973b,SELECT,1,1215165,1,,,,
+io.opentelemetry.jdbc,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,a8d45287cc57741e,UPDATE userdb.user,3,1363483,1,,user-service,Transaction.commit,1.0
+io.opentelemetry.jdbc,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,d999f1572f49f9f5,SELECT userdb,3,657175,1,,user-service,SELECT,1.0
+io.opentelemetry.spring-data-1.8,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,f84b758a09ba3b46,UserRepository.save,1,14144551,1,,,,
+io.opentelemetry.spring-data-1.8,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,dfbf91ba94d09a95,FriendRelationRepository.getFriendsIds,1,1588268,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,759d6715ffb4c71c32bc7afa9c92dc7e,66be397e2bada4e1,PATCH /user-service/user,2,1526708642,1,200,,,
+io.opentelemetry.hibernate-6.0,user-service,afa1007dadc1f727af5def4e25430f16,da2f483622daff44,SELECT meetingteam.userservice.models.FriendRequest,1,1786029,1,,,,
+io.opentelemetry.jdbc,user-service,afa1007dadc1f727af5def4e25430f16,b2c48c2eeba441e7,SELECT userdb.friend_request,3,694160,1,,user-service,SELECT meetingteam.userservice.models.FriendRequest,1.0
+io.opentelemetry.spring-data-1.8,user-service,afa1007dadc1f727af5def4e25430f16,5d50bf793805c0ff,FriendRequestRepository.getReceivedRequests,1,2156371,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,afa1007dadc1f727af5def4e25430f16,7bd17bff21ebf363,GET /user-service/friend-request/received-requests,2,6057488,1,200,,,
+io.opentelemetry.hibernate-6.0,user-service,1ab3a18eb252cd138db59f442951c4d2,92f9ce0e51b63bf0,SELECT meetingteam.userservice.models.User,1,7102303,1,,,,
+io.opentelemetry.jdbc,user-service,1ab3a18eb252cd138db59f442951c4d2,26210bdcea4fc915,SELECT userdb.user,3,1072528,1,,user-service,SELECT meetingteam.userservice.models.User,1.0
+io.opentelemetry.spring-data-1.8,user-service,1ab3a18eb252cd138db59f442951c4d2,af7924b40872d394,UserRepository.findByIds,1,9143924,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,1ab3a18eb252cd138db59f442951c4d2,9f0f64cb63575f21,POST /user-service/user/private/by-ids,2,1000857472,1,200,,,
+io.opentelemetry.http-url-connection,user-service,1ab3a18eb252cd138db59f442951c4d2,07af7eb95d56142d,GET,3,977395093,1,200,user-service,POST /user-service/user/private/by-ids,2.0
+io.opentelemetry.rabbitmq-2.7,websocket-service,235f250777362d405abddc14105bb0ca,237ca545fcfbd10e,queue.unbind,3,2164806,1,,,,
+io.opentelemetry.http-url-connection,websocket-service,091a9c70484a61de6cb28f01ac8da458,e2f67fbed0d41db0,GET,3,916035791,1,200,,,
+io.opentelemetry.tomcat-10.0,websocket-service,ce4bc63a2ddced4afd619853aa9c5bd9,4d9df9bcba1105ae,GET /websocket-service/wss/**,2,5208756,1,200,,,
+io.opentelemetry.tomcat-10.0,websocket-service,0b4f96e74b5cc3f94129a27a3586ba5f,82188f2dbd6fc7be,GET /websocket-service/wss/**,2,3362144,1,101,,,
+io.opentelemetry.hibernate-6.0,user-service,216e44fde79ad26405a73dc1793745f0,18ad0bc5f2ed212d,SELECT meetingteam.userservice.models.User,1,3046763,1,,,,
+io.opentelemetry.jdbc,user-service,216e44fde79ad26405a73dc1793745f0,0d457f03917a111a,SELECT userdb.user,3,945907,1,,user-service,SELECT meetingteam.userservice.models.User,1.0
+io.opentelemetry.spring-data-1.8,user-service,216e44fde79ad26405a73dc1793745f0,77a40ca91e529cc5,UserRepository.findByIds,1,3429392,1,,,,
+io.opentelemetry.tomcat-10.0,user-service,216e44fde79ad26405a73dc1793745f0,1ad99dc94a4c9d77,POST /user-service/user/private/by-ids,2,7006252,1,200,,,
+io.opentelemetry.tomcat-10.0,team-service,60171506c551bb95bf2e256168b8b748,a6a76543f24f0d34,OPTIONS /team-service/team-request/team/{teamId},2,4437778,1,200,,,
+io.opentelemetry.hibernate-6.0,team-service,216e44fde79ad26405a73dc1793745f0,e626b6b13ddab081,SELECT meetingteam.teamservice.models.TeamMember,1,4133642,1,,,,
+io.opentelemetry.hibernate-6.0,team-service,216e44fde79ad26405a73dc1793745f0,b7650eb9ab1bb0d0,SELECT meetingteam.teamservice.models.TeamRequest,1,2613824,1,,,,
+io.opentelemetry.tomcat-10.0,team-service,216e44fde79ad26405a73dc1793745f0,8090ad70b487fe92,GET /team-service/team-request/team/{teamId},2,27444607,1,200,,,
+io.opentelemetry.jdbc,team-service,216e44fde79ad26405a73dc1793745f0,1f3ac8b806ca2886,SELECT teamdb.team_member,3,982773,1,,team-service,SELECT meetingteam.teamservice.models.TeamMember,1.0
+io.opentelemetry.jdbc,team-service,216e44fde79ad26405a73dc1793745f0,2d2fe172a4048374,SELECT teamdb.team_request,3,910752,1,,team-service,SELECT meetingteam.teamservice.models.TeamRequest,1.0
+io.opentelemetry.spring-data-1.8,team-service,216e44fde79ad26405a73dc1793745f0,561b17fa58f6364b,TeamMemberRepository.findByTeamIdAndUserId,1,5210925,1,,team-service,GET /team-service/team-request/team/{teamId},2.0
+io.opentelemetry.spring-data-1.8,team-service,216e44fde79ad26405a73dc1793745f0,72fd6e20000ccd7b,TeamRequestRepository.getTeamRequestMessages,1,3515850,1,,team-service,GET /team-service/team-request/team/{teamId},2.0
+io.opentelemetry.java-http-client,team-service,216e44fde79ad26405a73dc1793745f0,1cfa7d02ebf3da23,POST,3,10293303,1,200,team-service,GET /team-service/team-request/team/{teamId},2.0
+io.opentelemetry.tomcat-10.0,team-service,c69910fa9b16d6e5c4008dce688afca7,40fc15a92ca3a716,OPTIONS /team-service/team,2,3996255,1,200,,,
+io.opentelemetry.hibernate-6.0,team-service,c292ea02c1ed00cf0504377e53ed8f97,2d31db2cb01dec9d,Session.find meetingteam.teamservice.models.Team,1,7510270,1,,,,
+io.opentelemetry.hibernate-6.0,team-service,c292ea02c1ed00cf0504377e53ed8f97,09b7d52bc748fe37,Transaction.commit,1,1045742,1,,,,
+io.opentelemetry.hibernate-6.0,team-service,c292ea02c1ed00cf0504377e53ed8f97,ba17d58fe97ceccd,SELECT meetingteam.teamservice.models.TeamMember,1,1865338,1,,,,
+io.opentelemetry.hibernate-6.0,team-service,c292ea02c1ed00cf0504377e53ed8f97,3dda0873b054828a,Session.merge meetingteam.teamservice.models.Team,1,1591606,1,,,,
+io.opentelemetry.hibernate-6.0,team-service,c292ea02c1ed00cf0504377e53ed8f97,2c67d56ec510ef9b,Transaction.commit,1,11479492,1,,,,
+io.opentelemetry.tomcat-10.0,team-service,c292ea02c1ed00cf0504377e53ed8f97,43c2a873c7e3e92f,PATCH /team-service/team,2,191941634,1,200,,,
+io.opentelemetry.jdbc,team-service,c292ea02c1ed00cf0504377e53ed8f97,8770de417ad79a34,SELECT teamdb.team,3,809704,1,,team-service,Session.find meetingteam.teamservice.models.Team,1.0
+io.opentelemetry.jdbc,team-service,c292ea02c1ed00cf0504377e53ed8f97,7400ae921b0de09e,SELECT teamdb.team_member,3,731713,1,,team-service,SELECT meetingteam.teamservice.models.TeamMember,1.0
+io.opentelemetry.jdbc,team-service,c292ea02c1ed00cf0504377e53ed8f97,b8431394e77f70ef,UPDATE teamdb.team,3,680552,1,,team-service,Transaction.commit,1.0
+io.opentelemetry.jdbc,team-service,c292ea02c1ed00cf0504377e53ed8f97,498ac087e371840f,SELECT teamdb.channel,3,761275,1,,team-service,PATCH /team-service/team,2.0
+io.opentelemetry.spring-data-1.8,team-service,c292ea02c1ed00cf0504377e53ed8f97,f016344be96dfe28,TeamRepository.findById,1,13133205,1,,team-service,PATCH /team-service/team,2.0
+io.opentelemetry.spring-data-1.8,team-service,c292ea02c1ed00cf0504377e53ed8f97,f75716b07653f058,TeamMemberRepository.getRoleByUserIdAndTeamId,1,2613918,1,,team-service,PATCH /team-service/team,2.0
+io.opentelemetry.spring-data-1.8,team-service,c292ea02c1ed00cf0504377e53ed8f97,4f66f7f9a2c1f802,TeamRepository.save,1,14013773,1,,team-service,PATCH /team-service/team,2.0
+io.opentelemetry.rabbitmq-2.7,team-service,c292ea02c1ed00cf0504377e53ed8f97,2e4bfc7a65e5883a,meetingteam-exchange publish,4,2148685,1,,team-service,PATCH /team-service/team,2.0
+io.opentelemetry.hibernate-6.0,team-service,c7e572a3432ac96243d1261f5e83fc83,4c75f1a0c6683c1a,Session.find meetingteam.teamservice.models.Team,1,1469785,1,,,,
+io.opentelemetry.hibernate-6.0,team-service,c7e572a3432ac96243d1261f5e83fc83,bcc5e9fd709d0fec,Transaction.commit,1,594336,1,,,,
+io.opentelemetry.hibernate-6.0,team-service,c7e572a3432ac96243d1261f5e83fc83,d42826e6d1256fea,SELECT meetingteam.teamservice.models.TeamMember,1,1304323,1,,,,
+io.opentelemetry.hibernate-6.0,team-service,c7e572a3432ac96243d1261f5e83fc83,0a52566f877ea4a2,Session.merge meetingteam.teamservice.models.Team,1,107659,1,,,,
+io.opentelemetry.hibernate-6.0,team-service,c7e572a3432ac96243d1261f5e83fc83,27755d8fcf9fa597,Transaction.commit,1,799571,1,,,,
+io.opentelemetry.jdbc,team-service,c7e572a3432ac96243d1261f5e83fc83,bdc5d8fbf0aa84a3,SELECT teamdb.team,3,710294,1,,team-service,Session.find meetingteam.teamservice.models.Team,1.0
+io.opentelemetry.jdbc,team-service,c7e572a3432ac96243d1261f5e83fc83,897bcaf396d68f35,SELECT teamdb.team_member,3,760027,1,,team-service,SELECT meetingteam.teamservice.models.TeamMember,1.0
+io.opentelemetry.jdbc,team-service,c7e572a3432ac96243d1261f5e83fc83,6e75c2f728af0229,SELECT teamdb.channel,3,774865,1,,,,
+io.opentelemetry.spring-data-1.8,team-service,c7e572a3432ac96243d1261f5e83fc83,e232a006ff05c2ac,TeamRepository.findById,1,4413069,1,,,,
+io.opentelemetry.spring-data-1.8,team-service,c7e572a3432ac96243d1261f5e83fc83,d01104079302573b,TeamMemberRepository.getRoleByUserIdAndTeamId,1,1661009,1,,,,
+io.opentelemetry.spring-data-1.8,team-service,c7e572a3432ac96243d1261f5e83fc83,7ce64c203889490e,TeamRepository.save,1,1968854,1,,,,
+io.opentelemetry.rabbitmq-2.7,team-service,c7e572a3432ac96243d1261f5e83fc83,f929e2280752c387,meetingteam-exchange publish,4,252497,1,,,,
+io.opentelemetry.tomcat-10.0,team-service,c7e572a3432ac96243d1261f5e83fc83,847ce2a0a331f540,PATCH /team-service/team,2,18351453,1,200,,,
+io.opentelemetry.tomcat-10.0,chat-service,77fb174614e7b90ee57d8ba47277e257,e3638d2ddfaa8b01,GET /chat-service/message/text_channel/{channelId},2,6000080,2,500,,,
+io.opentelemetry.tomcat-10.0,chat-service,f2637c9e47a5a8ea6fb8121add2dbfc8,89916bc902838aaf,POST /chat-service/message/text_message,2,5486675,2,500,,,
+io.opentelemetry.tomcat-10.0,chat-service,e10fc7c5c800238d0506323bc79c73e9,4d76fc0191ca1a06,GET /chat-service/message/text_channel/{channelId},2,7243192,2,500,,,
+io.opentelemetry.tomcat-10.0,websocket-service,410c77ab90664961032a17c3f669d18c,c410f69f32c3c105,GET /websocket-service/wss/**,2,3413312,1,200,,,
+io.opentelemetry.tomcat-10.0,websocket-service,0ec1b71283a423d54df964f1c1f637dd,5464801ef8b8aa22,GET /websocket-service/wss/**,2,3771106,1,101,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,ba31dfde688c42251df48051c836523a,d4969586973f0f4d,queue.unbind,3,2015916,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,7fd44d0e410aeb42445c17724df3571b,66912d0c11aacb58,queue.bind,3,3078661,1,,,,
+io.opentelemetry.tomcat-10.0,websocket-service,22ed1cd1d7de8385ac117cb41951fee7,19ef01de985a558c,GET /websocket-service/wss/**,2,3225153,1,101,,,
+io.opentelemetry.mongo-3.1,chat-service,a8b37e4f561fc27ccb3ac695eb31c823,459584c3a2bda2a1,createIndexes chatdb.Message,3,70588992,1,,,,
+io.opentelemetry.http-url-connection,chat-service,b2bc8e7f529cb3c69af418732c7e43b5,1c50e3de02d34416,GET,3,899984038,1,200,,,
+io.opentelemetry.http-url-connection,chat-service,b2bc8e7f529cb3c69af418732c7e43b5,32d0484bf63c3620,GET,3,321883731,1,200,,,
+io.opentelemetry.tomcat-10.0,chat-service,b2bc8e7f529cb3c69af418732c7e43b5,9e366c562bae92f6,POST /chat-service/message/text_message,2,6824385165,2,500,,,
+io.opentelemetry.java-http-client,chat-service,b2bc8e7f529cb3c69af418732c7e43b5,ec704cb1c73f5747,GET,3,5072458892,2,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.tomcat-10.0,chat-service,bcac2351011743d9d5f766d881fe8847,4c4144100ebe5d13,POST /chat-service/message/text_message,2,22462461,2,500,,,
+io.opentelemetry.java-http-client,chat-service,bcac2351011743d9d5f766d881fe8847,2ea99fc4ad6b663e,GET,3,12075958,2,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.tomcat-10.0,chat-service,1a8a33bfb4da764ac2ec404b7ad6fdfb,3a9da5f7bb7593f2,POST /chat-service/message/text_message,2,8935218,2,500,,,
+io.opentelemetry.java-http-client,chat-service,1a8a33bfb4da764ac2ec404b7ad6fdfb,699af7002520acf5,GET,3,2664361,2,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.tomcat-10.0,chat-service,714a695bdf7c40363dfaa13611f3de59,82089cd21b8a855f,POST /chat-service/message/text_message,2,7908754,2,500,,,
+io.opentelemetry.java-http-client,chat-service,714a695bdf7c40363dfaa13611f3de59,0bfa26d23f5a07a0,GET,3,2393375,2,,chat-service,POST /chat-service/message/text_message,2.0
+io.opentelemetry.tomcat-10.0,chat-service,bfd9de732d71e7d1e275ce80c443cbc1,213c00db9abb28b5,POST /chat-service/message/text_message,2,8464431,2,500,,,
+io.opentelemetry.java-http-client,chat-service,bfd9de732d71e7d1e275ce80c443cbc1,136498e8e1440697,GET,3,2383288,2,,chat-service,POST /chat-service/message/text_message,2.0

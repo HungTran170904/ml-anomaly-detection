@@ -1,0 +1,6 @@
+instrumentation_library,service_name,traceId,spanId,operation,kind,duration,span_status,http.status_code,parent.service_name,parent.operation,parent.kind
+io.opentelemetry.mongo-3.1,meeting-service,5eb70927e125853655e414da10fa3f39,b111e0ec9a2a9e81,createIndexes meetingdb.Meeting,3,72352640,2,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,3db330b9208493af9242ae924c8cda61,a6dabbc5563c37f8,basic.consume,3,24783368,1,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,7e4a80abf165a73cb93973d2f0e8f2c1,95c057557b829806,queue.declare,3,2964808,2,,,,
+io.opentelemetry.rabbitmq-2.7,websocket-service,b2a134e67222ff458d90f35778da0da8,2e53502685285859,basic.qos,3,5588131,2,,,,
+io.opentelemetry.tomcat-10.0,chat-service,02cfa4987e7eb172f9b11a6c26526051,c12035ffeac16caa,PUT /chat-service/message/reaction,2,966646220,1,200,,,
