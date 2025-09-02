@@ -3,7 +3,7 @@ from sklearn.preprocessing import LabelEncoder
 import pandas as pd
 import os
 import joblib 
-from isolation_forest.config import UNKNOWN
+from configs.constants import UNKNOWN
 
 def preprocess_df(df):
     df = df.drop(columns=["traceId", "spanId"])
@@ -21,7 +21,7 @@ def train_model():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     
     # Load data set
-    data_set_path = os.path.join(BASE_DIR, "../../data/processed/isolation_forest_data.csv")
+    data_set_path = os.path.join(BASE_DIR, "../../data/processed/data_set.csv")
     df = pd.read_csv(data_set_path, keep_default_na=False, na_values=[])
     
     # Preprocess data frame
@@ -34,8 +34,8 @@ def train_model():
     model.fit(X)
 
     # Export trained model and encoders
-    model_path = os.path.join(BASE_DIR, "../models/isolation_forest_model.pkl")
-    encoders_path = os.path.join(BASE_DIR, "../models/isolation_forest_label_encoders.pkl")
+    model_path = os.path.join(BASE_DIR, "isolation_forest_model.pkl")
+    encoders_path = os.path.join(BASE_DIR, "isolation_forest_label_encoders.pkl")
 
     joblib.dump(model, model_path)
     joblib.dump(label_encoders, encoders_path)

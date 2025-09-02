@@ -48,8 +48,8 @@ def extract_parent_span_data(data_set, span):
 
 def preprocess_data():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    input_path = os.path.join(BASE_DIR, "../../data/raw_data/traces.jsonl")
-    output_path = os.path.join(BASE_DIR, "../../data/processed/isolation_forest_data.csv")
+    input_path = os.path.join(BASE_DIR, "../data/raw_data/traces.jsonl")
+    output_path = os.path.join(BASE_DIR, "../data/processed/isolation_forest_data.csv")
 
     # Read JSON lines
     with open(input_path, "r") as f:

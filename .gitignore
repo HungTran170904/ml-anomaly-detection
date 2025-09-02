@@ -1,1 +1,3 @@
-src/models/*
+src/isolation_forest/*.pkl
+src/autoencoder/*.pkl
+src/autoencoder/*.keras

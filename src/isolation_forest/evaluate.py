@@ -1,8 +1,7 @@
 import pandas as pd
 import os
 import joblib
-from sklearn.preprocessing import LabelEncoder
-from isolation_forest.config import UNKNOWN
+from configs.constants import UNKNOWN
 
 def preprocess_test_df(new_df, label_encoders):
     new_df = new_df.drop(columns=["traceId", "spanId"])
@@ -16,7 +15,7 @@ def preprocess_test_df(new_df, label_encoders):
 def predict_new_data():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-    test_data_path = os.path.join(BASE_DIR, "../../data/test_data/if_test_data.csv")
+    test_data_path = os.path.join(BASE_DIR, "../../data/test_data/test_data.csv")
     model_path = os.path.join(BASE_DIR, "../models/isolation_forest_model.pkl")
     encoders_path = os.path.join(BASE_DIR, "../models/isolation_forest_label_encoders.pkl")
 
